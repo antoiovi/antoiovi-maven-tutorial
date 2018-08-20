@@ -6,11 +6,14 @@ Inoltre continunando nella complessità è possibile utilizzare i framework come
 
 ## 01-base
 In un progetto java la struttura delle directory è molto importante in quanto è strettamente correlata al concetto di package;
+
 Un primo vantaggio di utilizzare un framework come maven è che creando un progetto viene creata una struttura di directories standard, ed i comandi di compilazione terranno conto di questa struttura nella creazione del progetto finale;
+
 Qunindi in questo capitolo si vedono : 
-    - la creazione di un progetto basico
-    - la compilazione ed esecuzione del progetto
-    - la modifica del progetto per creare un modello (archetype) personalizzato
+    
+	- la creazione di un progetto basico
+	- la compilazione ed esecuzione del progetto
+        - la modifica del progetto per creare un modello (archetype) personalizzato
     
 ### Creazione del più semplice progetto (del più semplice archetype)
 * [Riferimento ](https://maven.apache.org/archetypes/maven-archetype-quickstart/) - Pagina ufficiale di MAVEN : Maven quickstart archetype
