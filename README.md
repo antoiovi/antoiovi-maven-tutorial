@@ -28,7 +28,9 @@ Vengono richiesti i seguenti input :
     Define value for property 'version' 1.0-SNAPSHOT: : 
     Define value for property 'package' $package : 
 ```
-e viene creata la seguente struttura di cartelle e files :
+dove per groupId si inserisce , per esempio 'com.antoiovi.project'; e  alla propietà 'package viene proposto di default il valore inserito per la proprieta groupId;
+Per aertifactId viene iserito il nome del progetto da creare, e viene creta la directory con questo nome.
+Viene quindio creata la seguente struttura di cartelle e files :
 
 ```sh
     project
@@ -44,6 +46,11 @@ e viene creata la seguente struttura di cartelle e files :
                     `-- AppTest.java
 ```
 
+Nella cartella 01-Base si trova il progetto base01 creato inserendo i seguenti valori :
+```sh
+    Define value for property 'groupId': com.antoiovi.base01
+    Define value for property 'artifactId': base01
+```
 
 
 ## 03-jpa
