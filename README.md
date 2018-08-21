@@ -3,6 +3,76 @@
 Sono contenuti diversi progetti in ordine crescente di difficoltà per spiegare l'utilizzo di maven per la realizzazione di applicazioni java ;
 Inoltre continunando nella complessità è possibile utilizzare i framework come modelli base per diversi tipi di applicazione.
 
+# Intro
+
+Maven si esegue da riga di comando inserendo mvn ed il nome del comando da eseguire
+$ mvn plugin:goal  -arg --arg
+$ mvn goal -arg --arg
+I comandi di maven si riferiscono tutti a dei plugin. alcuni inseriti nel core del programma , altri esterni e/o importati.
+Ogni comando da eseguire ha un goal (obbiettivo) a cui è mirato, ovvero lo scopo del comando.
+## Esempi di comandi
+>Vengono mostarti alcuni esempi di comandi per mostrare la sintassi .
+
+Questi comandi eseguono il goal di default del rispettivo plugin e non necessitano del nome del plugin (clean:clean; compiler:compile, install:install...)
+
+    $ mvn clean
+    $ mvn compile
+    $ mvn install
+Mostra l'help :
+
+    $ mvn -h
+    $ mvn --help
+    
+Il seguente comando esegue il plugin archetype con goal generate ; opzione  -D (--define) : definisce una proprietà e gli assegna (=) un valore;
+
+    $ mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart  -DarchetypeVersion=1.3
+    
+ 
+## Punti chiave
+Alcuni punti seguenti potrebbero inizialmente essere poco chiari; ma questo vuole essere uno specchietto di riferimento a cui riferirsi anche successivamente.
+
+I punti chiave sono
+* La struttura delle directories del progetto
+* il file POM.xml
+* gli archetipes
+* le dependencies
+* i goals (obbbiettivi)
+
+#### Plugins e Goals
+
+#### Lifecycles
+[Riferimento : https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html]
+Il processo di costruzione e distribuzione di un progetto è chiaramente definito.
+La definzione precisa del processo di esecuzione è una sequenza di fasi.
+Sono definite tre built-in sequenze di fasi (lifecicles) : **default, clean, deploy**.
+###### default
+La **default** lifecicle è :
+- validate
+- compile
+- test
+- package
+- verify
+- install
+- deploy
+
+se eseguo
+
+    $mvn install
+
+vengono eseguite tutte le fasi in ordine fino a install (deploy esluso)
+
+se eseguo 
+
+    $mvn compile
+
+vengono eseguite le fasi validate e compile;
+
+###### clean
+
+
+
+
+
 
 ## 01-base
 In un progetto java la struttura delle directory è molto importante in quanto è strettamente correlata al concetto di package;
