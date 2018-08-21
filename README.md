@@ -3,6 +3,7 @@
 Sono contenuti diversi progetti in ordine crescente di difficoltà per spiegare l'utilizzo di maven per la realizzazione di applicazioni java ;
 Inoltre continunando nella complessità è possibile utilizzare i framework come modelli base per diversi tipi di applicazione.
 
+
 # Intro
 
 Maven si esegue da riga di comando inserendo mvn ed il nome del comando da eseguire
@@ -13,7 +14,7 @@ Ogni comando da eseguire ha un goal (obbiettivo) a cui è mirato, ovvero lo scop
 ## Esempi di comandi
 >Vengono mostarti alcuni esempi di comandi per mostrare la sintassi .
 
-Questi comandi eseguono il goal di default del rispettivo plugin e non necessitano del nome del plugin (clean:clean; compiler:compile, install:install...)
+Questi comandi eseguono il goal di default del rispettivo plugin e non necessitano del nome del plugin (clean:clean, esegue la fase clean; compiler:compile, install:install...)
 
     $ mvn clean
     $ mvn compile
@@ -44,8 +45,11 @@ I punti chiave sono
 [Riferimento : https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html]
 Il processo di costruzione e distribuzione di un progetto è chiaramente definito.
 La definzione precisa del processo di esecuzione è una sequenza di fasi.
+Le fasi sono esgeuite da alcuni comandi di alcuni plugins (vedere [https://maven.apache.org/plugins/index.html]) .
 Sono definite tre built-in sequenze di fasi (lifecicles) : **default, clean, deploy**.
-###### default
+Per completezza vi sono diverese fasi intermedie non qui elencate (vedere https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html Life Cycle Reference)
+
+##### default
 La **default** lifecicle è :
 - validate
 - compile
@@ -67,7 +71,9 @@ se eseguo
 
 vengono eseguite le fasi validate e compile;
 
-###### clean
+##### clean e deploy
+
+per queste fasi vedere la documentazione ufficiale (https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
 
 
 
